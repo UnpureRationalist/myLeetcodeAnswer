@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-class Solution
+class Solution2
 {
 public:
     int lengthOfLastWord(string s)
@@ -11,13 +11,28 @@ public:
         stringstream ss;
         ss.str(s);
         string temp;
-        while(ss >> temp);
+        while (ss >> temp)
+            ;
         return temp.length();
     }
 };
 
-int main()
+class Solution
 {
-
-    return 0;
-}
+public:
+    int lengthOfLastWord(string s)
+    {
+        int ans = 0;
+        int n = s.length() - 1;
+        while(n >= 0 && s[n] == ' ')
+        {
+            --n;
+        }
+        while (n >= 0 && s[n] != ' ')
+        {
+            ++ans;
+            --n;
+        }
+        return ans;
+    }
+};

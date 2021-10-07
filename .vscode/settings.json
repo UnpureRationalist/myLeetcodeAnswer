@@ -60,6 +60,8 @@
         "xloctime": "cpp",
         "unordered_set": "cpp",
         "bit": "cpp",
-        "clocale": "cpp"
+        "clocale": "cpp",
+        "functional": "cpp",
+        "sstream": "cpp"
     }
 }
