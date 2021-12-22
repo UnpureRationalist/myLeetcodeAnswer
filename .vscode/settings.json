@@ -62,6 +62,7 @@
         "bit": "cpp",
         "clocale": "cpp",
         "functional": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "cfloat": "cpp"
     }
 }
