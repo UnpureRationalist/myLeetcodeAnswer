@@ -63,6 +63,9 @@
         "clocale": "cpp",
         "functional": "cpp",
         "sstream": "cpp",
-        "cfloat": "cpp"
+        "cfloat": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "optional": "cpp"
     }
 }
