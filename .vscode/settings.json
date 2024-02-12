@@ -66,6 +66,8 @@
         "cfloat": "cpp",
         "array": "cpp",
         "string_view": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "climits": "cpp",
+        "*.tcc": "cpp"
     }
 }
