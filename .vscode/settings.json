@@ -68,6 +68,10 @@
         "string_view": "cpp",
         "optional": "cpp",
         "climits": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "memory_resource": "cpp",
+        "fstream": "cpp"
     }
 }
