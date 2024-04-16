@@ -4,6 +4,19 @@
 #include <vector>
 using namespace std;
 
+/*
+
+5
+1 8 0 0 0
+0 1 6 0 0
+0 0 1 8 0
+0 0 0 1 0
+0 7 9 0 0
+0 4
+
+
+*/
+
 int calConnectedNum(const vector<vector<int>> &adjMatrix, const vector<int> &exposed, int drop_idx) {
   int n = adjMatrix.size();
   vector<char> visited(n, 0);
