@@ -1,9 +1,7 @@
 5
-1627845600,client1,factorA,10
-1627845605,client2,factorB,15
-1627845610,client1,factorA,5
-1627845615,client1,factorB,8
-1627845620,client2,factorB,20
-2
-factorA,5
-factorB,7
+1 8 0 0 0
+0 1 6 0 0
+0 0 1 8 0
+0 0 0 1 0
+0 7 9 0 0
+0 4
