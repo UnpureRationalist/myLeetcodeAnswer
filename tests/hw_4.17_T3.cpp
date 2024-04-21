@@ -4,14 +4,18 @@ using namespace std;
 struct Vert {
   int index;
   int weight;
+  int capacity;
 
   Vert() {}
 
-  Vert(int i, int w) : index(i), weight(w) {}
+  Vert(int i, int w, int c) : index(i), weight(w), capacity(c) {}
 
   bool operator<(const Vert &rhs) const {
     if (this->weight != rhs.weight) {
       return this->weight > rhs.weight;
+    }
+    if (this->capacity != rhs.capacity) {
+      return this->capacity > rhs.capacity;
     }
     return this->index > rhs.index;
   }
@@ -26,12 +30,12 @@ void solve(const vector<vector<int>> &adjMatrix, const vector<int> &remainCapaci
   dis[fault_node] = 0;
 
   priority_queue<Vert> q;
-  q.emplace(fault_node, 0);
+  q.emplace(fault_node, 0, remainCapacity[fault_node]);
 
   vector<int> ans;
 
   while (!q.empty()) {
-    auto [cur_idx, weight] = q.top();
+    auto [cur_idx, weight, capacity] = q.top();
     q.pop();
     if (visited[cur_idx]) {
       continue;
@@ -49,7 +53,7 @@ void solve(const vector<vector<int>> &adjMatrix, const vector<int> &remainCapaci
       if (weight != -1) {
         if (!visited[index] && dis[cur_idx] + weight < dis[index]) {
           dis[index] = dis[cur_idx] + weight;
-          q.emplace(index, dis[index]);
+          q.emplace(index, dis[index], remainCapacity[index]);
         }
       }
     }
