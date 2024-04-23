@@ -1,21 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Vert {
+struct Edge {
   int index;
   int weight;
   int capacity;
 
-  Vert() {}
+  Edge() {}
 
-  Vert(int i, int w, int c) : index(i), weight(w), capacity(c) {}
+  Edge(int i, int w, int c) : index(i), weight(w), capacity(c) {}
 
-  bool operator<(const Vert &rhs) const {
+  bool operator<(const Edge &rhs) const {
     if (this->weight != rhs.weight) {
       return this->weight > rhs.weight;
-    }
-    if (this->capacity != rhs.capacity) {
-      return this->capacity > rhs.capacity;
     }
     return this->index > rhs.index;
   }
@@ -29,7 +26,7 @@ void solve(const vector<vector<int>> &adjMatrix, const vector<int> &remainCapaci
   vector<char> visited(n, 0);
   dis[fault_node] = 0;
 
-  priority_queue<Vert> q;
+  priority_queue<Edge> q;
   q.emplace(fault_node, 0, remainCapacity[fault_node]);
 
   vector<int> ans;
