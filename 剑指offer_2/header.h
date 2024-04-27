@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <climits>
 #include <cmath>
+#include <cstring>
 #include <ctime>
 #include <iostream>
 #include <list>
