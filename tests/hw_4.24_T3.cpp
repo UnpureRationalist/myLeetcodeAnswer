@@ -107,13 +107,13 @@ void solve(int n, const vector<int> &edges) {
     }
   }
 
-    for (auto &circle_lst : circles) {
-      cout << "circle: ";
-      for (auto &id : circle_lst) {
-        cout << id << " ";
-      }
-      cout << endl;
-    }
+//   for (auto &circle_lst : circles) {
+//     cout << "circle: ";
+//     for (auto &id : circle_lst) {
+//       cout << id << " ";
+//     }
+//     cout << endl;
+//   }
 
   int num_of_circles = circles.size();
   vector<ServiceGroup> services(num_of_circles);
@@ -124,9 +124,9 @@ void solve(int n, const vector<int> &edges) {
     services[i] = list2Info(i, circles[i], n, reverseEdges);
   }
   sort(services.begin(), services.end());
-    for (auto &serv : services) {
-      serv.show();
-    }
+//   for (auto &serv : services) {
+//     serv.show();
+//   }
   auto &circle_lst = circles[services[0].id];
   for (int i = 0; i < circle_lst.size(); ++i) {
     if (i > 0) {
@@ -147,11 +147,11 @@ int main() {
     edges.emplace_back(temp);
   }
   // 验证 edges 是否满足 edges[i] != i
-  for (int i = 0; i < edges.size(); ++i) {
-    if (i == edges[i]) {
-      std::cout << "error in idx: " << i << endl;
-    }
-  }
+//   for (int i = 0; i < edges.size(); ++i) {
+//     if (i == edges[i]) {
+//       std::cout << "error in idx: " << i << endl;
+//     }
+//   }
   solve(n, edges);
   return 0;
 }
