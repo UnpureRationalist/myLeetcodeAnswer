@@ -41,13 +41,13 @@ public:
 };
 
 // 辅助栈
-class MinStack2
+class MinStack
 {
     stack<int> x_stack;
     stack<int> min_stack;
 
 public:
-    MinStack2()
+    MinStack()
     {
         min_stack.push(INT_MAX);
     }
